@@ -12,7 +12,7 @@ public class Main {
 
         PasswordValidator validator=new PasswordValidatorImpl();
         try{
-            validator.validate("Ankush123");
+            validator.validate("Abcd1234");
         }catch (Exception e){
             System.out.println(e.getMessage());
         }

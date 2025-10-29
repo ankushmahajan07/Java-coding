@@ -14,4 +14,4 @@ public class NumberValidationRule implements PasswordRules {
         return new ValidationResult(true,"OK");
     }
 }
-}
+

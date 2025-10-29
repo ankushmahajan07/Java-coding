@@ -35,4 +35,4 @@ boolean lengthOK=resuts.stream().filter(r -> r.getMessage().contains("longer tha
 
 
     }
-}
+
