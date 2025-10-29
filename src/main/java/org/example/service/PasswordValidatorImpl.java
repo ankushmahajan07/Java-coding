@@ -17,7 +17,7 @@ public class PasswordValidatorImpl implements  PasswordValidator{
             new NotNullRule(),
             new LengthRule(),
             new UpperCaseRule(),
-            new LoweCaseRule(),
+            new LowerCaseRule(),
             new NumberValidationRule()
     );
 
@@ -28,20 +28,30 @@ public class PasswordValidatorImpl implements  PasswordValidator{
      */
     @Override
     public void validate(String password) throws Exception {
-List<ValidationResult>resuts=rules.parallelStream().map(rule-> rule.validate(password))
-        .collect(Collectors.toList());
-long passed=resuts.stream().filter(ValidationResult::isValid).count();
 
-boolean lengthOK=resuts.stream().filter(r -> r.getMessage().contains("longer than 8")).findFirst().map(ValidationResult::isValid)
+        List<ValidationResult>resuts=rules.parallelStream().map(rule-> rule.validate(password))
+        .collect(Collectors.toList());
+
+ List<String>failedMessages = resuts.stream().filter(result ->!result.isValid())
+        .map(ValidationResult::getMessage).collect(Collectors.toList());
+
+//long passed=resuts.stream().filter(ValidationResult::isValid).count();
+if (!failedMessages.isEmpty()){
+    throw new Exception("Password invalid : " + String.join(", ",failedMessages));
+}
+/*boolean lengthOK=resuts.stream().filter(r -> r.getMessage().contains("longer than 8")).findFirst()
+        .map(ValidationResult::isValid)
         .orElse(true);
         if (!lengthOK) {
             throw new Exception("Password is too short");
         }
         if(passed<3){
             throw new Exception("Password Invalid-less than 3 rules passed");
-        }
+        }*/
 
         }
+
+
 
 
     }
