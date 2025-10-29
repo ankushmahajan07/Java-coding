@@ -3,7 +3,7 @@ package org.example.rules;
 import org.example.model.ValidationResult;
 
 /*
- *
+ * Checks that password contains at least one lower case letter.
  */
 public class LoweCaseRule implements PasswordRules {
     @Override

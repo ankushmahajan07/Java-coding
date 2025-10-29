@@ -2,6 +2,9 @@ package org.example.rules;
 
 import org.example.model.ValidationResult;
 
+/**
+ * Checks that password must not null or empty.
+ */
 public class NotNullRule implements PasswordRules {
     @Override
     public ValidationResult validate(String password) {

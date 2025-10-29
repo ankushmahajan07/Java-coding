@@ -1,7 +1,9 @@
 package org.example.rules;
 
 import org.example.model.ValidationResult;
-
+/*
+ * Checks that password contains at least one Upper case letter.
+ */
 public class UpperCaseRule implements PasswordRules {
     @Override
     public ValidationResult validate(String password) {
