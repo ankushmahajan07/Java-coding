@@ -15,7 +15,7 @@ public class PasswordValidatorImpl implements  PasswordValidator{
 
     private final List<PasswordRules> rules= Arrays.asList(
             new NotNullRule(),
-            new LenghRule(),
+            new LengthRule(),
             new UpperCaseRule(),
             new LoweCaseRule(),
             new NumberValidationRule()
