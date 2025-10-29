@@ -5,6 +5,7 @@ import org.example.model.ValidationResult;
 /**
  * checks that Password must contain at least one number.
  */
+
 public class NumberValidationRule implements PasswordRules {
     @Override
     public ValidationResult validate(String password) {

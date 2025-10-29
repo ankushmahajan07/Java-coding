@@ -1,5 +1,9 @@
 package org.example.model;
 
+/**
+ * This class represents the outcome of validating
+ * a password or any user input.
+ */
 public class ValidationResult {
     private final boolean valid;
     private final String message;

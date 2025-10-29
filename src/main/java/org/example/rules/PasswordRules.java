@@ -1,7 +1,7 @@
 package org.example.rules;
 
 import org.example.model.ValidationResult;
-/*
+/**
 *This interface representing a password validation rules.
 Each implementation defines a specific validation check.
  */
