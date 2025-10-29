@@ -1,7 +1,6 @@
 package org.example.rules;
 
 import org.example.model.ValidationResult;
-import org.example.service.PasswordRules;
 
 public class NumberValidationRule implements PasswordRules {
     @Override

@@ -30,7 +30,7 @@ boolean lengthOK=resuts.stream().filter(r -> r.getMessage().contains("longer tha
         if(passed<3){
             throw new Exception("Password Invalid-less than 3 rules passed");
         }
-        System.out.println("Password is Valid");
+
         }
 
 

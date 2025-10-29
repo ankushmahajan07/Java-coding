@@ -1,8 +1,10 @@
 package org.example.rules;
 
 import org.example.model.ValidationResult;
-import org.example.service.PasswordRules;
 
+/*
+ *
+ */
 public class LoweCaseRule implements PasswordRules {
     @Override
     public ValidationResult validate(String password) {

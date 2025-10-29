@@ -1,8 +1,10 @@
 package org.example.rules;
 
 import org.example.model.ValidationResult;
-import org.example.service.PasswordRules;
 
+/**
+ * Checks if the password Length is greater than 8 characters.
+ */
 public class LenghRule implements PasswordRules {
     @Override
     public ValidationResult validate(String password) {
